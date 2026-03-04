@@ -19,8 +19,8 @@ if (!SECRET) {
 }
 
 // File paths
-const usersFile = path.join(__dirname, 'data', 'users.json');
-const employeesFile = path.join(__dirname, 'data', 'employees.json');
+const usersFile = path.join(__dirname, 'users.json');
+const employeesFile = path.join(__dirname, 'employees.json');
 
 const read = (file) => JSON.parse(fs.readFileSync(file, 'utf-8'));
 const write = (file, data) =>
@@ -86,3 +86,4 @@ app.delete('/employees/:id', auth, (req, res) => {
 app.listen(3000, () =>
   console.log('✅ Backend running on http://localhost:3000')
 );
+
